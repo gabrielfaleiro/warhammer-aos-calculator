@@ -1,0 +1,79 @@
+{
+  "name": "Clawlord on Gnaw-Beast",
+  "characteristics": {
+    "points": 160,
+    "miniatures_in_unit": 1,
+    "main_combat_type": "melee",
+    "base": {
+      "move": 9,
+      "health": 7,
+      "control": 2,
+      "save": "4+",
+      "ward": null
+    },
+    "improved": {
+      "source": "heroic_traits/skilled_manipulator",
+      "move": 9,
+      "health": 7,
+      "control": 2,
+      "save": "4+",
+      "ward": "4+"
+    }
+  },
+  "weapons": [
+    {
+      "name": "Ratling Pistol",
+      "quantity": "miniatures_in_unit",
+      "type": "ranged",
+      "base": {
+        "range": 10,
+        "attacks": "D6",
+        "hit": "3+",
+        "wound": "3+",
+        "rend": 1,
+        "damage": 1,
+        "abilities": [
+          "shoot-in-combat",
+          "crit-auto-wound"
+        ]
+      }
+    },
+    {
+      "name": "Warpforged Halberd",
+      "quantity": "miniatures_in_unit",
+      "type": "melee",
+      "base": {
+        "attacks": 5,
+        "hit": "3+",
+        "wound": "4+",
+        "rend": 1,
+        "damage": 2,
+        "abilities": []
+      },
+      "improved": {
+        "source": "unit/passive-ability",
+        "attacks": 8,
+        "hit": "3+",
+        "wound": "4+",
+        "rend": 1,
+        "damage": 2,
+        "abilities": []
+      }
+    },
+    {
+      "name": " Gnaw-beast's Chisel Fangs",
+      "quantity": "miniatures_in_unit",
+      "type": "melee",
+      "base": {
+        "attacks": 4,
+        "hit": "4+",
+        "wound": "3+",
+        "rend": 1,
+        "damage": "D3",
+        "abilities": [
+          "companion"
+        ]
+      }
+    }
+  ]
+}
