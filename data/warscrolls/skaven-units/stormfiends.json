@@ -1,0 +1,82 @@
+{
+  "name": "Stormfiends",
+  "characteristics": {
+    "points": 260,
+    "miniatures_in_unit": 3,
+    "main_combat_type": "melee",
+    "base": {
+      "move": 6,
+      "health": 6,
+      "control": 2,
+      "save": "4+",
+      "ward": null
+    }
+  },
+  "weapons": [
+    {
+      "name": " Ratling Cannons",
+      "quantity": 1,
+      "type": "ranged",
+      "base": {
+        "range": 15,
+        "attacks": "3D6",
+        "hit": "4+",
+        "wound": "3+",
+        "rend": 1,
+        "damage": 1,
+        "abilities": []
+      }
+    },
+    {
+      "name": " Warpfire Projectors",
+      "quantity": 2,
+      "type": "ranged",
+      "base": {
+        "range": 10,
+        "attacks": "3D6",
+        "hit": "2+",
+        "wound": "4+",
+        "rend": 2,
+        "damage": 1,
+        "abilities": [
+          "shoot-in-combat"
+        ]
+      }
+    },
+    {
+      "name": "Doomflayer Gauntlets",
+      "quantity": 2,
+      "type": "melee",
+      "base": {
+        "attacks": 5,
+        "hit": "4+",
+        "wound": "2+",
+        "rend": 2,
+        "damage": "D3",
+        "abilities": []
+      },
+      "improved": {
+        "source": "weapon/ability/charge-1-damage",
+        "attacks": 5,
+        "hit": "4+",
+        "wound": "2+",
+        "rend": 2,
+        "damage": "1D3+1",
+        "abilities": []
+      }
+    },
+    {
+      "name": "Grinderfists",
+      "quantity": 1,
+      "type": "melee",
+      "base": {
+        "attacks": 4,
+        "hit": "4+",
+        "wound": "2+",
+        "rend": 2,
+        "damage": 2,
+        "abilities": []
+      }
+    }
+  ]
+}
