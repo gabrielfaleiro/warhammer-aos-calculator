@@ -12,6 +12,14 @@
       "ward": null
     },
     "improved": {
+      "source": "unit/stomvermin",
+      "move": 9,
+      "health": 7,
+      "control": 2,
+      "save": "4+",
+      "ward": "5+"
+    },
+    "improved_2": {
       "source": "heroic_traits/skilled_manipulator",
       "move": 9,
       "health": 7,

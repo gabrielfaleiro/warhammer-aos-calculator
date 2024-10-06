@@ -1,0 +1,55 @@
+{
+  "name": "Arch-Warlock",
+  "characteristics": {
+    "points": 170,
+    "miniatures_in_unit": 1,
+    "main_combat_type": "melee",
+    "wizard": 1,
+    "base": {
+      "move": 6,
+      "health": 5,
+      "control": 2,
+      "save": "4+",
+      "ward": null
+    },
+    "improved": {
+      "source": "heroic_traits/skilled_manipulator",
+      "move": 6,
+      "health": 5,
+      "control": 2,
+      "save": "4+",
+      "ward": "4+"
+    }
+  },
+  "weapons": [
+    {
+      "name": "Warpfire Gaunlet",
+      "quantity": "miniatures_in_unit",
+      "type": "ranged",
+      "base": {
+        "range": 10,
+        "attacks": 6,
+        "hit": "2+",
+        "wound": "4+",
+        "rend": 2,
+        "damage": 1,
+        "abilities": [
+          "shoot-in-combat"
+        ]
+      }
+    },
+    {
+      "name": "Stormcage Halberd",
+      "quantity": "miniatures_in_unit",
+      "type": "melee",
+      "base": {
+        "attacks": 3,
+        "hit": "3+",
+        "wound": "4+",
+        "rend": 1,
+        "damage": 2,
+        "abilities": []
+      }
+    }
+  ]
+}

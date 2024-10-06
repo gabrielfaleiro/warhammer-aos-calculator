@@ -1,0 +1,30 @@
+{
+  "name": "Manifestation - Bell of Doom",
+  "characteristics": {
+    "points": 100,
+    "miniatures_in_unit": 1,
+    "main_combat_type": "melee",
+    "base": {
+      "move": "3D6",
+      "health": 7,
+      "control": 0,
+      "save": "6+",
+      "ward": "6+"
+    }
+  },
+  "weapons": [
+    {
+      "name": "Volatile Warp Energy",
+      "quantity": "miniatures_in_unit",
+      "type": "melee",
+      "base": {
+        "attacks": "2D6",
+        "hit": "4+",
+        "wound": "4+",
+        "rend": 1,
+        "damage": 1,
+        "abilities": []
+      }
+    }
+  ]
+}

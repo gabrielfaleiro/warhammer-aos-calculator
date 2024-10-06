@@ -1,0 +1,58 @@
+{
+  "name": "Ratling Warpblaster",
+  "characteristics": {
+    "points": 180,
+    "miniatures_in_unit": 1,
+    "main_combat_type": "ranged",
+    "base": {
+      "move": 6,
+      "health": 7,
+      "control": 2,
+      "save": "4+",
+      "ward": null
+    }
+  },
+  "weapons": [
+    {
+      "name": "Hail of Warpstone Bullets",
+      "quantity": "miniatures_in_unit",
+      "type": "ranged",
+      "base": {
+        "range": 20,
+        "attacks": "3D6+3",
+        "hit": "4+",
+        "wound": "3+",
+        "rend": 1,
+        "damage": 1,
+        "abilities": [
+          "crit-auto-wound"
+        ]
+      },
+      "improved": {
+        "source": ["unit/ability/overwhelming-fire", "unit/ability/more-more-warpstone-bullets"],
+        "range": 20,
+        "attacks": "6D6+3",
+        "hit": "3+",
+        "wound": "3+",
+        "rend": 1,
+        "damage": 1,
+        "abilities": [
+          "crit-auto-wound"
+        ]
+      }
+    },
+    {
+      "name": "Thrall-rats' Claws",
+      "quantity": "miniatures_in_unit",
+      "type": "melee",
+      "base": {
+        "attacks": 4,
+        "hit": "4+",
+        "wound": "5+",
+        "rend": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    }
+  ]
+}

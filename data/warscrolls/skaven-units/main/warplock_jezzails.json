@@ -1,0 +1,54 @@
+{
+  "name": "Warlock Jezzails",
+  "characteristics": {
+    "points": 150,
+    "miniatures_in_unit": 3,
+    "main_combat_type": "ranged",
+    "base": {
+      "move": 6,
+      "health": 2,
+      "control": 1,
+      "save": "4+",
+      "ward": null
+    }
+  },
+  "weapons": [
+    {
+      "name": "Warplock Jezzail",
+      "quantity": "miniatures_in_unit",
+      "type": "ranged",
+      "base": {
+        "range": 24,
+        "attacks": 2,
+        "hit": "4+",
+        "wound": "3+",
+        "rend": 2,
+        "damage": 2,
+        "abilities": ["crit-auto-wound"]
+      },
+      "improved": {
+        "source": ["unit/passive-ability/warpstone-snipers"],
+        "range": 24,
+        "attacks": 2,
+        "hit": "3+",
+        "wound": "3+",
+        "rend": 2,
+        "damage": 2,
+        "abilities": ["crit-auto-wound"]
+      }
+    },
+    {
+      "name": "Rusty Knives",
+      "quantity": "miniatures_in_unit",
+      "type": "melee",
+      "base": {
+        "attacks": 2,
+        "hit": "4+",
+        "wound": "5+",
+        "rend": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    }
+  ]
+}

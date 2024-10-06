@@ -1,0 +1,56 @@
+{
+  "name": "Warp Lightning Cannon",
+  "characteristics": {
+    "points": 160,
+    "miniatures_in_unit": 1,
+    "main_combat_type": "ranged",
+    "base": {
+      "move": 3,
+      "health": 8,
+      "control": 2,
+      "save": "4+",
+      "ward": null
+    }
+  },
+  "weapons": [
+    {
+      "name": "Warp Lightning Blast",
+      "quantity": "miniatures_in_unit",
+      "type": "ranged",
+      "base": {
+        "range": 20,
+        "attacks": "2D6",
+        "hit": "4+",
+        "wound": "1+",
+        "rend": 6,
+        "damage": 1,
+        "abilities": ["unit/passive-ability/warp-lightning-blast"],
+        "comments": "Wound 1+ and rend 6 to evaluate mortal damage. This belongs to unit/passive-ability/warp-lightning-blast."
+      },
+      "improved": {
+        "source": ["unit/ability/more-more-warp-lightning"],
+        "range": 20,
+        "attacks": "2D6+6",
+        "hit": "4+",
+        "wound": "1+",
+        "rend": 6,
+        "damage": 1,
+        "abilities": ["unit/passive-ability/warp-lightning-blast"],
+        "comments": "Wound 1+ and rend 6 to evaluate mortal damage. This belongs to unit/passive-ability/warp-lightning-blast."
+      }
+    },
+    {
+      "name": "Crew's Teeth adn Knives",
+      "quantity": "miniatures_in_unit",
+      "type": "melee",
+      "base": {
+        "attacks": "D6",
+        "hit": "4+",
+        "wound": "5+",
+        "rend": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    }
+  ]
+}

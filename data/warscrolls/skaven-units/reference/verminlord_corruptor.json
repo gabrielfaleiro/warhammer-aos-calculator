@@ -1,0 +1,47 @@
+{
+  "name": "Vermilord Corruptor",
+  "characteristics": {
+    "points": 360,
+    "miniatures_in_unit": 1,
+    "main_combat_type": "melee",
+    "priest": 1,
+    "base": {
+      "move": 10,
+      "health": 13,
+      "control": 5,
+      "save": "4+",
+      "ward": "5+"
+    }
+  },
+  "weapons": [
+    {
+      "name": "Plaguereapers",
+      "quantity": "miniatures_in_unit",
+      "type": "melee",
+      "base": {
+        "attacks": 8,
+        "hit": "3+",
+        "wound": "2+",
+        "rend": 2,
+        "damage": 2,
+        "abilities": [
+          "crit-auto-wound"
+        ]
+      }
+    },
+    {
+      "name": "Plaguemaster",
+      "quantity": "miniatures_in_unit",
+      "type": "melee",
+      "base": {
+        "attacks": "D3",
+        "hit": "2+",
+        "wound": "1+",
+        "rend": 6,
+        "damage": 1,
+        "abilities": [],
+        "comments": "Wound 1+ and rend 6 to evaluate mortal damage. This is an ability. Receive a ritual point."
+      }
+    }
+  ]
+}

@@ -17,12 +17,12 @@ def main():
     # Create figure and axis
     fig, ax = plt.subplots()
 
-    # Create data for the diagonal line y = x
-    x = np.linspace(0, 10, 100)  # 100 points from 0 to 10
-    y = x  # Diagonal line
-
-    # Plot the diagonal line
-    ax.plot(x, y, label='Diagonal', color='blue')
+    # # Create data for the diagonal line y = x
+    # x = np.linspace(0, 10, 100)  # 100 points from 0 to 10
+    # y = x  # Diagonal line
+    #
+    # # Plot the diagonal line
+    # ax.plot(x, y, label='Diagonal', color='blue')
 
     # Loop through all the files in the directory
     for filename in os.listdir(directory_path):
@@ -64,7 +64,7 @@ def main():
     # Add labels and legend
     ax.set_xlabel('Mean received damage')
     ax.set_ylabel('Mean delivered damage per 100 points')
-    ax.set_title('Skaven army')
+    ax.set_title('Skaven Army')
     ax.legend()
 
     # Show the plot
