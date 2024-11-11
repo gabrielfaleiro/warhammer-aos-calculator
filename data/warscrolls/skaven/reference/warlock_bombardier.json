@@ -1,0 +1,60 @@
+{
+  "name_en": "Warlock Bombardier",
+  "name": "Warlock Bombardier",
+  "name_es": "Bombardero Brujo",
+  "characteristics": {
+    "points": 120,
+    "miniatures_in_unit": 1,
+    "main_combat_type": "ranged",
+    "base": {
+      "move": 6,
+      "health": 5,
+      "control": 2,
+      "save": "5+",
+      "ward": null
+    }
+  },
+  "weapons": [
+    {
+      "name_es": "Apocacohete",
+      "quantity": "miniatures_in_unit",
+      "type": "ranged",
+      "base": {
+        "range": 18,
+        "attacks": 2,
+        "hit": "4+",
+        "wound": "3+",
+        "rend": 1,
+        "damage": "1D6",
+        "abilities": ["anti-infantry-1-rend"]
+      },
+      "improved": {
+        "source": [
+          "weapon/ability/anti-infantry-1-rend",
+          "unit/passive-ability/explosive-ammunition",
+          "unit/reaction/more-more-death"
+        ],
+        "range": 18,
+        "attacks": 2,
+        "hit": "3+",
+        "wound": "3+",
+        "rend": 1,
+        "damage": "1D3+3",
+        "abilities": ["anti-infantry-1-rend"]
+      }
+    },
+    {
+      "name_es": "Bastón de Fuego",
+      "quantity": "miniatures_in_unit",
+      "type": "melee",
+      "base": {
+        "attacks": 3,
+        "hit": "4+",
+        "wound": "4+",
+        "rend": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    }
+  ]
+}

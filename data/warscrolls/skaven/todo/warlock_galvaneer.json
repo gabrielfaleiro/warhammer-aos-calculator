@@ -1,0 +1,71 @@
+{
+  "name_en": "Warlock Galvaneer",
+  "name": "Warlock Galvaneer",
+  "name_es": "Galvanizador Brujo",
+  "characteristics": {
+    "points": 140,
+    "miniatures_in_unit": 1,
+    "main_combat_type": "ranged",
+    "base": {
+      "move": 6,
+      "health": 5,
+      "control": 2,
+      "save": "5+",
+      "ward": null
+    }
+  },
+  "weapons": [
+    {
+      "name_en": "Arrasador Voltdisforme",
+      "quantity": "miniatures_in_unit",
+      "type": "ranged",
+      "base": {
+        "range": 18,
+        "attacks": 2,
+        "hit": "3+",
+        "wound": "3+",
+        "rend": 2,
+        "damage": "1D3",
+        "abilities": ["crit-2-hits", "anti-cavalry-1-rend"]
+      },
+      "improved": {
+        "source": ["unit/reaction/more-more-warp-energy", "weapon/ability/anti-cavalry-1-rend"],
+        "range": 18,
+        "attacks": 2,
+        "hit": "3+",
+        "wound": "3+",
+        "rend": 3,
+        "damage": "1D3",
+        "abilities": ["crit-auto-wound"]
+      }
+    },
+    {
+      "name_en": "Más-más Muerte Voltidisforme",
+      "quantity": "miniatures_in_unit",
+      "type": "ranged",
+      "comments": "Habilidad de la unidad cuando ha atacado con Arrasador Voltdisforme",
+      "base": {
+        "range": 18,
+        "attacks": 1,
+        "hit": "2+",
+        "wound": "1+",
+        "rend": 6,
+        "damage": "1D3",
+        "abilities": []
+      }
+    },
+    {
+      "name_en": "Warpforged Dagger",
+      "quantity": "miniatures_in_unit",
+      "type": "melee",
+      "base": {
+        "attacks": 3,
+        "hit": "4+",
+        "wound": "4+",
+        "rend": 0,
+        "damage": 2,
+        "abilities": []
+      }
+    }
+  ]
+}

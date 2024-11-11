@@ -1,0 +1,63 @@
+{
+  "name_en": "Doom-Flayers",
+  "name": "Doom-Flayers",
+  "characteristics": {
+    "points": 130,
+    "miniatures_in_unit": 2,
+    "main_combat_type": "melee",
+    "base": {
+      "move": "2D6+3",
+      "health": 4,
+      "control": 1,
+      "save": "4+",
+      "ward": null
+    }
+  },
+  "weapons": [
+    {
+      "name_en": "Cuchillas Giratorias",
+      "quantity": "miniatures_in_unit",
+      "type": "melee",
+      "base": {
+        "attacks": 2,
+        "hit": "4+",
+        "wound": "5+",
+        "rend": 0,
+        "damage": 1,
+        "abilities": [
+          "anti-infantry-1-rend",
+          "charge-1-damage"
+        ]
+      },
+      "improved": {
+        "source": [
+          "weapon/ability/charge-1-damage",
+          "weapon/ability/anti-infantry-1-rend"
+        ],
+        "attacks": 2,
+        "hit": "4+",
+        "wound": "5+",
+        "rend": 1,
+        "damage": 2,
+        "abilities": [
+          "anti-infantry-1-rend",
+          "charge-1-damage"
+        ]
+      }
+    },
+    {
+      "name_en": "Cuchillas Giratorias",
+      "quantity": "miniatures_in_unit",
+      "type": "melee",
+      "comments": "unit/ability/rolling-death",
+      "base": {
+        "attacks": 1,
+        "hit": "2+",
+        "wound": "1+",
+        "rend": 6,
+        "damage": "1D3",
+        "abilities": []
+      }
+    }
+  ]
+}

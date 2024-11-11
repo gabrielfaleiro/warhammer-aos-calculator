@@ -1,0 +1,64 @@
+{
+  "name_en": "Dummy Warscroll",
+  "name": "Dummy Warscroll",
+  "characteristics": {
+    "points": 130,
+    "miniatures_in_unit": 5,
+    "main_combat_type": "melee",
+    "base": {
+      "move": 6,
+      "health": 2,
+      "control": 1,
+      "save": "6+",
+      "ward": null
+    }
+  },
+  "weapons": [
+    {
+      "name_en": "Poisoned Wind Globes",
+      "quantity": "miniatures_in_unit",
+      "type": "ranged",
+      "base": {
+        "range": 10,
+        "attacks": 1,
+        "hit": "3+",
+        "wound": "3+",
+        "rend": 1,
+        "damage": "1D3",
+        "abilities": [
+          "shoot-in-combat",
+          "anti-infantry-1-rend"
+        ]
+      },
+      "improved": {
+        "source": [
+          "weapon/ability/anti-infantry-1-rend",
+          "unit/passive-ability"
+        ],
+        "range": 10,
+        "attacks": 1,
+        "hit": "3+",
+        "wound": "3+",
+        "rend": 2,
+        "damage": "1D3+1",
+        "abilities": [
+          "shoot-in-combat",
+          "anti-infantry-1-rend"
+        ]
+      }
+    },
+    {
+      "name_en": "Rusty Knife",
+      "quantity": "miniatures_in_unit",
+      "type": "melee",
+      "base": {
+        "attacks": 1,
+        "hit": "4+",
+        "wound": "5+",
+        "rend": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    }
+  ]
+}

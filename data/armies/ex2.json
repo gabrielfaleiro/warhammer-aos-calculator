@@ -1,0 +1,29 @@
+{
+  "name": "1000 stormfiends",
+  "faction": "skaven",
+    "units": [
+      {
+        "name_en": "Warlock Jezzails",
+        "reinforced": false
+      },
+        {
+            "name_en": "Stormfiends",
+            "reinforced": false
+        },
+        {
+            "name_en": "Rat Ogors",
+            "reinforced": false
+        },
+        {
+            "name_en": "Grey Seer"
+        },
+        {
+            "name_en": "Clanrats",
+            "reinforced": false
+        },
+        {
+            "name_en": "Clanrats",
+            "reinforced": false
+        }
+    ]
+}

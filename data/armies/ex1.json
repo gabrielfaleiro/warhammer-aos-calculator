@@ -1,0 +1,31 @@
+{
+  "name": "1000 2x grey seer",
+  "faction": "skaven",
+    "units": [
+      {
+        "name_en": "Clanrats",
+        "reinforced": false
+      },
+      {
+        "name_en": "Rat Ogors",
+        "reinforced": false
+      },
+      {
+          "name_en": "Stormvermin",
+          "reinforced": false
+      },
+      {
+        "name_en": "Clanrats",
+        "reinforced": false
+      },
+      {
+          "name_en": "Grey Seer"
+      },
+      {
+          "name_en": "Grey Seer"
+      },
+      {
+          "name_en": "Warlock Jezzails"
+      }
+    ]
+}

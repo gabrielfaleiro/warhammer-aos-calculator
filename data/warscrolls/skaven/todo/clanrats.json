@@ -1,0 +1,31 @@
+{
+  "name_en": "Clanrats",
+  "name": "Clanrats",
+  "characteristics": {
+    "points": 150,
+    "miniatures_in_unit": 20,
+    "main_combat_type": "melee",
+    "base": {
+      "move": 6,
+      "health": 1,
+      "control": 1,
+      "save": "5+",
+      "ward": null
+    }
+  },
+  "weapons": [
+    {
+      "name_en": "Claws, Blades and Fangs",
+      "quantity": "miniatures_in_unit",
+      "type": "melee",
+      "base": {
+        "attacks": 2,
+        "hit": "4+",
+        "wound": "5+",
+        "rend": 0,
+        "damage": 1,
+        "abilities": ["crit-auto-wound"]
+      }
+    }
+  ]
+}

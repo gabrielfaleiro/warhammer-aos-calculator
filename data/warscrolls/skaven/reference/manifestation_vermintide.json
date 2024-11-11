@@ -1,0 +1,33 @@
+{
+  "name_en": "Manifestation - Vermintide",
+  "name": "Manifestation - Vermintide",
+  "characteristics": {
+    "points": 100,
+    "miniatures_in_unit": 1,
+    "main_combat_type": "melee",
+    "base": {
+      "move": 7,
+      "health": 13,
+      "control": 0,
+      "save": "6+",
+      "ward": "6+"
+    }
+  },
+  "weapons": [
+    {
+      "name_en": "Chittering Bites",
+      "quantity": "miniatures_in_unit",
+      "type": "melee",
+      "base": {
+        "attacks": 13,
+        "hit": "5+",
+        "wound": "5+",
+        "rend": 0,
+        "damage": 1,
+        "abilities": [
+          "crit-auto-wound"
+        ]
+      }
+    }
+  ]
+}

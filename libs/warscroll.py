@@ -1,4 +1,4 @@
-import json
+import logging
 from libs.common import parse_characteristic
 from libs.base import BaseData
 
@@ -40,9 +40,20 @@ class WarScroll:
         return parse_characteristic(obj, modifier)
 
     def do_calculations(self, improved: bool = False):
-        # self.calc_mean_delivered_damage(improved)
-        self.calc_mean_delivered_damage_per_points(improved)
-        self.calc_mean_received_damage(improved)
+        try:
+            self.calc_mean_delivered_damage(improved)
+            self.calc_mean_delivered_damage_per_points(improved)
+            self.calc_mean_received_damage(improved)
+            self.calc_mean_received_damage_per_points(improved) # not useful
+            self.calc_mean_received_damage_per_total_health(improved)
+            self.calc_total_health(improved)
+            self.calc_total_health_per_points(improved)
+            self.calc_total_control(improved)
+            self.calc_total_control_per_points(improved)
+        except Exception as e:
+            ws_name = self.get('name_en')
+            logging.error(f"Error in warscroll: {ws_name}")
+            logging.error(f"Error in calculations: {e}")
 
     def calc_mean_delivered_damage(self, improved: bool = False) -> float:
         melee_damage = 0
@@ -94,6 +105,13 @@ class WarScroll:
                       stats_ws.getp('attacks') *
                       stats_ws.getp('hit', -1) *
                       stats_ws.getp('wound'))
+
+            # Apply modifiers
+            if stats_ws.has("modifiers"):
+                for modifier in stats_ws.get("modifiers"):
+                    mod_value = parse_characteristic(modifier.get("value"))
+                    wounds = wounds * mod_value
+
             # Introduce enemy defense characteristics
             delivered_wounds = wounds * (1.0 - parse_characteristic(self.enemy_save,
                                                                     - stats_ws.getp('rend')))
@@ -119,6 +137,12 @@ class WarScroll:
                           stats_ws.getp('hit') *
                           stats_ws.getp('wound'))
 
+            # Apply modifiers
+            if stats_ws.has("modifiers"):
+                for modifier in stats_ws.get("modifiers"):
+                    mod_value = parse_characteristic(modifier.get("value"))
+                    wounds = wounds * mod_value
+
             # Introduce enemy defense characteristics
             delivered_wounds = wounds * (1.0 - parse_characteristic(self.enemy_save,
                                                                     - stats_ws.getp('rend')))
@@ -143,9 +167,7 @@ class WarScroll:
         self.calculations['mean_delivered_damage_per_points'] = mean_delivered_damage_per_points
         return mean_delivered_damage_per_points
 
-
     def calc_mean_received_damage(self, improved: bool = False) -> float:
-
         if improved:
             if self.has('characteristics.improved'):
                 characteristics_ws = WarScroll(self.get('characteristics.improved'))
@@ -167,4 +189,67 @@ class WarScroll:
 
         self.calculations['mean_received_damage'] = mean_received_damage
         return mean_received_damage
+
+    def calc_mean_received_damage_per_points(self, improved: bool = False) -> float:
+        mean_received_damage_per_points = \
+            (self.reference_points *
+             (self.calc_mean_received_damage(improved) /
+              self.getp('characteristics.points')))
+
+        self.calculations['mean_received_damage_per_points'] = mean_received_damage_per_points
+        return mean_received_damage_per_points
+
+    def calc_total_health(self, improved: bool = False) -> float:
+        if improved:
+            if self.has('characteristics.improved'):
+                characteristics_ws = WarScroll(self.get('characteristics.improved'))
+            else:
+                characteristics_ws = WarScroll(self.get('characteristics.base'))
+        else:
+            characteristics_ws = WarScroll(self.get('characteristics.base'))
+
+        total_health = characteristics_ws.getp('health') * self.getp('characteristics.miniatures_in_unit')
+
+        self.calculations['total_health'] = total_health
+        return total_health
+
+    def calc_total_health_per_points(self, improved: bool = False) -> float:
+        total_health_per_points = \
+            (self.reference_points *
+             (self.calc_total_health(improved) /
+              self.getp('characteristics.points')))
+
+        self.calculations['total_health_per_points'] = total_health_per_points
+        return total_health_per_points
+
+    def calc_total_control(self, improved: bool = False) -> float:
+        if improved:
+            if self.has('characteristics.improved'):
+                characteristics_ws = WarScroll(self.get('characteristics.improved'))
+            else:
+                characteristics_ws = WarScroll(self.get('characteristics.base'))
+        else:
+            characteristics_ws = WarScroll(self.get('characteristics.base'))
+
+        total_control = characteristics_ws.getp('control') * self.getp('characteristics.miniatures_in_unit')
+
+        self.calculations['total_control'] = total_control
+        return total_control
+
+    def calc_total_control_per_points(self, improved: bool = False) -> float:
+        total_control_per_points = \
+            (self.reference_points *
+             (self.calc_total_control(improved) /
+              self.getp('characteristics.points')))
+
+        self.calculations['total_control_per_points'] = total_control_per_points
+        return total_control_per_points
+
+    def calc_mean_received_damage_per_total_health(self, improved: bool = False) -> float:
+        mean_received_damage_per_total_health = \
+            (self.calc_mean_received_damage(improved) /
+             self.calc_total_health(improved))
+
+        self.calculations['mean_received_damage_per_total_health'] = mean_received_damage_per_total_health
+        return mean_received_damage_per_total_health
 

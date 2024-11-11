@@ -1,0 +1,143 @@
+{
+  "name_en": "Stormfiends",
+  "name": "Stormfiends",
+  "characteristics": {
+    "points": 260,
+    "miniatures_in_unit": 3,
+    "main_combat_type": "melee",
+    "base": {
+      "move": 6,
+      "health": 6,
+      "control": 2,
+      "save": "4+",
+      "ward": null
+    }
+  },
+  "weapons": [
+    {
+      "name_en": "Ratling Cannons",
+      "quantity": 0,
+      "type": "ranged",
+      "base": {
+        "range": 15,
+        "attacks": "3D6",
+        "hit": "4+",
+        "wound": "3+",
+        "rend": 1,
+        "damage": 1,
+        "abilities": []
+      }
+    },
+    {
+      "name_en": "Windlaunchers",
+      "quantity": 0,
+      "type": "ranged",
+      "base": {
+        "range": 15,
+        "attacks": 3,
+        "hit": "4+",
+        "wound": "3+",
+        "rend": 2,
+        "damage": "1D3",
+        "abilities": []
+      }
+    },
+    {
+      "name_en": "Warpfire Projectors",
+      "quantity": 1,
+      "type": "ranged",
+      "base": {
+        "range": 10,
+        "attacks": "2D6",
+        "hit": "2+",
+        "wound": "4+",
+        "rend": 2,
+        "damage": 1,
+        "abilities": [
+          "shoot-in-combat"
+        ]
+      }
+    },
+    {
+      "name_en": "Doomflayer Gauntlets",
+      "quantity": 0,
+      "type": "melee",
+      "comment": "Better than Shock Gauntlets if charging is more frequent than one in three turns",
+      "base": {
+        "attacks": 5,
+        "hit": "4+",
+        "wound": "2+",
+        "rend": 2,
+        "damage": "D3",
+        "abilities": []
+      },
+      "improved": {
+        "source": "weapon/ability/charge-1-damage",
+        "attacks": 5,
+        "hit": "4+",
+        "wound": "2+",
+        "rend": 2,
+        "damage": "1D3+1",
+        "abilities": []
+      }
+    },
+    {
+      "name_en": "Grinderfists",
+      "quantity": 1,
+      "type": "melee",
+      "base": {
+        "attacks": 4,
+        "hit": "4+",
+        "wound": "2+",
+        "rend": 2,
+        "damage": 2,
+        "abilities": []
+      }
+    },
+    {
+      "name_en": "Shock Gauntlets (1/2)",
+      "quantity": 1,
+      "type": "melee",
+      "base": {
+        "attacks": 4,
+        "hit": "5+",
+        "wound": "2+",
+        "rend": 1,
+        "damage": 2,
+        "abilities": []
+      }
+    },
+    {
+      "name_en": "Shock Gauntlets (2/2)",
+      "quantity": 1,
+      "type": "melee",
+      "base": {
+        "attacks": 4,
+        "hit": "6+",
+        "wound": "2+",
+        "rend": 1,
+        "damage": 2,
+        "modifiers": [
+          {
+            "source": "unit/ability/shock-gauntlets/hits",
+            "value": "1D6"
+          }
+        ],
+        "abilities": []
+      }
+    },
+    {
+      "name_en": "Clubbing Blows",
+      "quantity": 1,
+      "type": "melee",
+      "base": {
+        "attacks": 3,
+        "hit": "4+",
+        "wound": "2+",
+        "rend": 0,
+        "damage": 2,
+        "abilities": []
+      }
+    }
+  ]
+}

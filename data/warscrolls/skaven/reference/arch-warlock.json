@@ -1,0 +1,71 @@
+{
+  "name_en": "Arch-Warlock",
+  "name": "Arch-Warlock",
+  "name_es": "Archibrujo",
+  "characteristics": {
+    "points": 170,
+    "miniatures_in_unit": 1,
+    "main_combat_type": "melee",
+    "wizard": 1,
+    "base": {
+      "move": 6,
+      "health": 5,
+      "control": 2,
+      "save": "4+",
+      "ward": null
+    },
+    "improved": {
+      "source": "heroic_traits/skilled_manipulator",
+      "move": 6,
+      "health": 5,
+      "control": 2,
+      "save": "4+",
+      "ward": "4+"
+    }
+  },
+  "weapons": [
+    {
+      "name_en": "Warpfire Gaunlet",
+      "quantity": "miniatures_in_unit",
+      "type": "ranged",
+      "base": {
+        "range": 10,
+        "attacks": 3,
+        "hit": "4+",
+        "wound": "2+",
+        "rend": 2,
+        "damage": 1,
+        "abilities": [
+          "shoot-in-combat"
+        ]
+      }
+    },
+    {
+      "name_en": "Stormcage Halberd",
+      "name_es": "Alabarda Jaula de Tormenta",
+      "quantity": "miniatures_in_unit",
+      "type": "melee",
+      "base": {
+        "attacks": 3,
+        "hit": "3+",
+        "wound": "4+",
+        "rend": 1,
+        "damage": 2,
+        "abilities": []
+      }
+    },
+    {
+      "name_es": "Garra Hidráulica Aplastante",
+      "quantity": "miniatures_in_unit",
+      "type": "melee",
+      "base": {
+        "attacks": 2,
+        "hit": "4+",
+        "wound": "2+",
+        "rend": 2,
+        "damage": 2,
+        "abilities": []
+      }
+    }
+  ]
+}

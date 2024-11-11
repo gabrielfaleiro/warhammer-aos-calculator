@@ -1,0 +1,55 @@
+{
+  "name_en": "Warlock Engineer",
+  "name": "Warlock Engineer",
+  "characteristics": {
+    "points": 140,
+    "miniatures_in_unit": 1,
+    "main_combat_type": "ranged",
+    "base": {
+      "move": 6,
+      "health": 5,
+      "control": 2,
+      "save": "5+",
+      "ward": null
+    }
+  },
+  "weapons": [
+    {
+      "name_en": "Warplock Musket",
+      "quantity": "miniatures_in_unit",
+      "type": "ranged",
+      "base": {
+        "range": 24,
+        "attacks": 2,
+        "hit": "3+",
+        "wound": "3+",
+        "rend": 2,
+        "damage": "D3",
+        "abilities": ["crit-auto-wound"]
+      },
+      "improved": {
+        "source": ["unit/reaction/more-more-warp-energy"],
+        "range": 24,
+        "attacks": 2,
+        "hit": "3+",
+        "wound": "3+",
+        "rend": 2,
+        "damage": 3,
+        "abilities": ["crit-auto-wound"]
+      }
+    },
+    {
+      "name_en": "Warpforged Dagger",
+      "quantity": "miniatures_in_unit",
+      "type": "melee",
+      "base": {
+        "attacks": 3,
+        "hit": "4+",
+        "wound": "4+",
+        "rend": 0,
+        "damage": 2,
+        "abilities": []
+      }
+    }
+  ]
+}

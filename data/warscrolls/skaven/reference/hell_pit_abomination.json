@@ -1,0 +1,70 @@
+{
+  "name_en": "Hell Pit Abomination",
+  "name": "Hell Pit Abomination",
+  "name_es": "Abominación del Pozo Infernal",
+  "characteristics": {
+    "points": 270,
+    "miniatures_in_unit": 1,
+    "main_combat_type": "melee",
+    "base": {
+      "move": "1D6+5",
+      "health": 14,
+      "control": 5,
+      "save": "5+",
+      "ward": null
+    },
+    "keywords": [
+      "CHAOS",
+      "SKAVEN",
+      "MONSTER",
+      "MOULDER"
+    ]
+  },
+  "weapons": [
+    {
+      "name_en": "Gnashing Teeth and Flailing Fists",
+      "quantity": "miniatures_in_unit",
+      "type": "melee",
+      "base": {
+        "attacks": 8,
+        "hit": "4+",
+        "wound": "2+",
+        "rend": 2,
+        "damage": 2,
+        "abilities": [
+          "companion",
+          "anti-infantry-1-rend"
+        ]
+      },
+      "improved": {
+        "source": [
+          "weapon/ability/anti-infantry-1-rend",
+          "unit/passive-ability/battle-damaged"
+        ],
+        "attacks": 13,
+        "hit": "4+",
+        "wound": "2+",
+        "rend": 3,
+        "damage": 2,
+        "abilities": [
+          "companion",
+          "anti-infantry-1-rend"
+        ]
+      }
+    },
+    {
+      "name_en": "Avalanche of Flesh",
+      "quantity": "miniatures_in_unit",
+      "type": "melee",
+      "base": {
+        "attacks": 10,
+        "hit": "3+",
+        "wound": "5+",
+        "rend": 6,
+        "damage": 2,
+        "abilities": [],
+        "comments": "Rend 6 to evaluate mortal damage. This is an ability. Only infantry."
+      }
+    }
+  ]
+}

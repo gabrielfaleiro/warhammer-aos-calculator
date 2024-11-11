@@ -1,0 +1,46 @@
+{
+  "name_en": "Ratling Guns",
+  "name": "Ratling Guns",
+  "name_es": "Amerratadoras",
+  "characteristics": {
+    "points": 150,
+    "miniatures_in_unit": 3,
+    "main_combat_type": "ranged",
+    "base": {
+      "move": 6,
+      "health": 3,
+      "control": 1,
+      "save": "6+",
+      "ward": null
+    }
+  },
+  "weapons": [
+    {
+      "name_en": "Ratling Guns",
+      "quantity": "miniatures_in_unit",
+      "type": "ranged",
+      "base": {
+        "range": 15,
+        "attacks": "3D6",
+        "hit": "4+",
+        "wound": "4+",
+        "rend": 1,
+        "damage": 1,
+        "abilities": ["crit-2-hits"]
+      }
+    },
+    {
+      "name_en": "Rusty Knives",
+      "quantity": "miniatures_in_unit",
+      "type": "melee",
+      "base": {
+        "attacks": 2,
+        "hit": "4+",
+        "wound": "5+",
+        "rend": 0,
+        "damage": 1,
+        "abilities": []
+      }
+    }
+  ]
+}

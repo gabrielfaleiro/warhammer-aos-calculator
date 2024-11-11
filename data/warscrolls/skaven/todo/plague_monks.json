@@ -1,0 +1,31 @@
+{
+  "name_en": "Plague Monks",
+  "name": "Plague Monks",
+  "characteristics": {
+    "points": 140,
+    "miniatures_in_unit": 20,
+    "main_combat_type": "melee",
+    "base": {
+      "move": 6,
+      "health": 1,
+      "control": 1,
+      "save": "6+",
+      "ward": null
+    }
+  },
+  "weapons": [
+    {
+      "name_en": "Foetid Weapons",
+      "quantity": "miniatures_in_unit",
+      "type": "melee",
+      "base": {
+        "attacks": 2,
+        "hit": "4+",
+        "wound": "5+",
+        "rend": 0,
+        "damage": 1,
+        "abilities": ["crit-auto-wound"]
+      }
+    }
+  ]
+}

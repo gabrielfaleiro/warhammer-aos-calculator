@@ -51,7 +51,6 @@ def parse_characteristic(characteristic: str, modifier: float = 0) -> float:
 def parse_dice_probability(input_str: str, modifier: float = 0) -> float:
     match = get_numbers(input_str)
     threshold_value = (7 - match[0] + modifier)
-    # TODO: no funciona intentando desactivar el ward
     if threshold_value > 7:
         return 1
     elif threshold_value < 1:
